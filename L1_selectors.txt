@@ -1,0 +1,87 @@
+Syntax
+-------
+property	:	values
+				1.predefined
+				2.userdefined
+				
+Link css in html
+----------------
+3 ways
+	1)Inline  <tagname style = "property:value;">
+	
+	2)External
+			create a css file named style
+			<link rel="stylesheet" href ="style.css">
+			
+	3)Internal	<style>
+	h2 is a selector
+				h2{
+					color:brown;
+				}
+				</style>
+				
+Selectors
+----------
+1) Type selectors - tagname{
+						property:value;
+						}
+2) Class selectors - <h1 class = "classname">
+					.classname{
+							property:value;
+								}
+3) Id selectors - <h1 id = "idname">
+					#idname{
+							property:value;
+								}
+4) Attribute selectors - <a href = "">
+						a[href = ""]{
+							property:value;
+								}
+5) Pseudo class selectors - used to style 4states of element
+						selector:pseudo class{
+							property:value;
+								}
+6) Pseudo element selectors - used to style a part of element
+							<p> Lorem.....
+							dipsum.....</p>
+							
+							p::first-line{
+								property:value;
+								}
+7) Combinator selectors - <article>
+				<p>
+							
+				</p>
+			   </article>
+						
+				  article>p{
+					property:value;
+						}
+
+8) Universal selectors - used to select everything
+						*{
+						property:value;
+								}
+
+
+
+order of execution
+------------
+Position - when two elements have same style,bottom most rule is applied
+
+Specificity - when two elements have same style, the execution order is
+		element selector - 4th priority
+		class selector - 3rd priority
+		attribute selector - 2nd priority
+		id selector - 1st priority
+
+Type - when two elements have same style,
+	external stylesheet - 3rd priority
+	internal stylesheet - 2nd priority
+	inline stylesheet - 1st priority
+
+Important - when two elements have same style, the one with important keyword is applied.
+		color:red !important;     //this is applied
+		color:green;
+		
+								
